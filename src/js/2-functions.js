@@ -1,9 +1,9 @@
-//Array para guardar lo que nos devuelve la API y para guardar los favoritos!
+// Array para guardar las series que nos devuelve la API.
 let gSeries = [];
+// Array para guardar los favoritos!
 let gFavoriteSeries = [];
 
-// función para recorrer los objetos del Api y en el caso de no encontrar imagen y su nombre, que se pinte el placeholder o que salga el resultado.
-
+// Función para pintar todas las series.
 function displayAllSeries() {
   allSeriesListElements.innerHTML = ``;
 
@@ -26,8 +26,15 @@ function displayAllSeries() {
             <img class="seriers__item-image" src="${showImg}" />
           </li>`;
   }
+
+  // Vincular el evento click con la función addSerieToFavorites.
+  const allSeries = document.querySelectorAll(".js-serie-item");
+  for (const serie of allSeries) {
+    serie.addEventListener("click", addSerieToFavorites);
+  }
 }
 
+// Función para pintar todas las series favoritas.
 function displayFavoriteSeries() {
   favoriteSeriesListElements.innerHTML = ``;
 
@@ -53,55 +60,53 @@ function displayFavoriteSeries() {
   }
 }
 
-// función que toma todas las series y permita hacer un click sobre cada una de las ellas y luego llame a la función hadleClickFav(event).
-
-function addListenerToSeries() {
-  const allSeries = document.querySelectorAll(".js-serie-item");
-  for (const serie of allSeries) {
-    serie.addEventListener("click", addSerieToFavorites);
-  }
-}
-
-//funcion favorites
+//Funcion agregar la serie a la lista de favoritos.
 function addSerieToFavorites(event) {
+  
   const serieElement = event.currentTarget; // <li>
+  //Añadir clase favorite
   serieElement.classList.toggle("favorite");
+   // Convertir el id de texto a número    
   const favoriteSerieId = parseInt(serieElement.id);
 
+  // Buscar serie con el id `favoriteSerieId`
   const favoriteSerie = gSeries.find((favorite) => favorite.show.id === favoriteSerieId);
-  if (favoriteSerie !== undefined) //
+  if (favoriteSerie !== undefined) // si existe la serie
   {
-    if (gFavoriteSeries.find((favorite) => favorite.show.id === favoriteSerieId) === undefined) //
+    if (gFavoriteSeries.find((favorite) => favorite.show.id === favoriteSerieId) === undefined) // evitar duplicados!
       gFavoriteSeries.push(favoriteSerie);
   }
 
+  // Guardar array de favoritos en el localStorage como texto usando JSON.stringify para convertirlo a texto.
   localStorage.setItem("favorites", JSON.stringify(gFavoriteSeries));
-  displayFavoriteSeries();
 
-  // onclick="deleteSerieFromFavorites(event, ${serie.id})"
+  // Mostrar lista de favoritos
+  displayFavoriteSeries();
 }
 
 function deleteSerieFromFavorites(event) {
   event.preventDefault();
   const selectedId = parseInt(event.currentTarget.parentElement.id);
 
-  // borrar serie de lista de favoritos
-  // const whenIAddedTheEvent = event.currentTarget;
-  // const selectedId = parseInt(whenIAddedTheEvent.id);
-
+  //  Borrar serie de lista de favoritos
   const favoriteIndex = gFavoriteSeries.findIndex(
     (favorite) => favorite.show.id === selectedId
   );
+  
+  if (favoriteIndex === -1)
+    return
 
-  if (favoriteIndex !== -1) gFavoriteSeries.splice(favoriteIndex, 1);
+  // Eliminar
+  gFavoriteSeries.splice(favoriteIndex, 1);
 
+  // Guardar cambios
   localStorage.setItem("favorites", JSON.stringify(gFavoriteSeries));
 
+  // Mostrar lista
   displayFavoriteSeries(deleteSerieFromFavorites);
 }
 
-// mostrar lista de series
-
+// Limpiar lista de favoritos
 function deleteAllFavoriteSeries() {
   gFavoriteSeries = [];
   localStorage.setItem("favorites", JSON.stringify(gFavoriteSeries));

@@ -14,21 +14,37 @@
   </head>
 
   <body>
-    <div class="page">
+
       <header class="page__header">
+        <div class="logo"><img class="image" src="./assets/images/logo-creado.jpeg" alt=""></div>
       </header>
-
       <main class="page__main">
-        
-      </main>
+        <section>
+          <h1 class="title">Buscador de Series</h1>
+          <form action="">
+            <label for="write"></label>
+            <input class="enter-your-search js-enter-your-search" type="text" id=write name="write"
+              placeholder="Introduce tu búsqueda">
+            <label for="btn"></label>
+            <input class="btnSearch js-btn-search" type="submit" id=btn name="btn" value="Buscar">
+          </form>
+        </section>
 
+        <div class="series__box">
+          <ul class="series__list js-series-list">
+          </ul>
+          <div class="series__favorites-box js-favoritesBox">
+            <h3>Series favoritas</h3>
+            <button onclick="deleteAllFavoriteSeries()">Borrar todo</button>
+            <ul class="series__favorites-list js-favorites-list">
+            </ul>
+          </div>
+        </div>
+      </main>
       <footer class="page__footer">
-        <small>
-          &copy; Todos los derechos reservados
-        </small>
+        <span class="copyright">&copy; M.T Todos los derechos reservados</span>
       </footer>
 
-    </div>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

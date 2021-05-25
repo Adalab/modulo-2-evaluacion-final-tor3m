@@ -1,4 +1,4 @@
-// función principal al darle al botón de buscar, que devuelva la API y que pinte el resultado.
+// Función principal al darle al botón de buscar me devuelve el resultado, la lista de series.
 
 function handleClickSearch(event) {
   event.preventDefault();
@@ -8,9 +8,12 @@ function handleClickSearch(event) {
     .then((data) => {
       gSeries = data;
       displayAllSeries();
-      addListenerToSeries();
     });
-  //Debe contener todas las funciones adicionales
 }
 
 buttonSearch.addEventListener("click", handleClickSearch);
+//Al cargar la página me devuelve los favoritos que guarde em el localStorage.
+gFavoriteSeries = JSON.parse(localStorage.getItem("favorites"));
+if (gFavoriteSeries === null) gFavoriteSeries = [];
+
+displayFavoriteSeries();
