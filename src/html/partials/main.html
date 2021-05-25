@@ -1,3 +1,24 @@
 <main class="page__main">
-  
+  <section>
+    <h1 class="title">Buscador de Series</h1>
+    <form action="">
+      <label for="write"></label>
+      <input class="enterYourSearch js-enter-your-search" type="text" id=write name="write"
+        placeholder="Introduce tu búsqueda">
+      <label for="btn"></label>
+      <input class="btnSearch js-btn-search" type="submit" id=btn name="btn" value="Buscar">
+    </form>
+  </section>
+
+  <div class="series__box">
+
+    <ul class="series__list js-series-list">
+    </ul>
+    <div class="series__favorites-box js-favoritesBox">
+      <h3>Series favoritas</h3>
+      <button onclick="deleteAllFavoriteSeries()">Borrar todo</button>
+      <ul class="series__favorites-list js-favorites-list">
+      </ul>
+    </div>
+  </div>
 </main>
