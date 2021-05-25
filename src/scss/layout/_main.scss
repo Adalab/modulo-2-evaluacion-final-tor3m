@@ -1,6 +1,67 @@
-body {
-  padding: 2rem;
-  height: 100vh;
-  background-color: $color-bg;
-  font-family: $font-main;
+.page__main {
+  min-height: 100%;
+  width: 100%;  
+  background-image: url("./img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 80px;
+}
+
+.enterYourSearch {
+  height: 30px;
+  border-radius: 7px;
+}
+
+.series__box {
+  
+  display: flex;
+}
+
+.series__list,
+.series__favorites-list {
+  list-style-type: none;
+}
+
+.series__list {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  align-content: flex-start;
+}
+
+.series__list--item {
+  background-color: #d3cece;
+  width: 230px;
+  margin: 20px 20px 20px 20px;
+  padding: 7px 7px 7px 7px;
+  border-radius: 5px;
+  height: 370px;
+}
+
+.series__favorites-box {
+  height: 100%;
+  background-color: #5d1972;
+  backface-visibility: inherit;
+  border-radius: 5px;
+}
+
+.series__Favorites-List--item {
+  background-color: rgb(141, 88, 138);
+  width: 230px;
+  margin: 20px 20px 20px 20px;
+  padding: 7px 7px 7px 7px;
+  border-radius: 5px;
 }
