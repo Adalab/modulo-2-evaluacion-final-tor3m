@@ -1,61 +1,78 @@
+👋 Hi there!
+![SeriesFinder](https://user-images.githubusercontent.com/81690198/142517094-8f8964c0-64c8-43c2-b890-3f893c8abb6e.png)
 
-# modulo-2-evaluacion-final-tor3m
+##  Series Finder
+Developing a TV series search web application, which allows us to un/mark the series as favorites and saves them in local storage, using JavaScript.
 
-Hola! Está es mi evaluación final del segundo modulo del curso de Adalab, donde pongo a prueba mis conocimientos en JavaScript.
-
-## Guía de inicio rápido
-
-El ejercicio consiste en desarrollar una aplicación web de búsqueda de series de TV, que nos permite des/marcar las series como favoritas y guardarlas en local storage, usando JavaScript.
-
-El ejercicio también tiene una parte de maquetación con HTML y Sass.
-
- 
-## Maquetación
-
-General:
-- Usar una estructura adecuada de ficheros y carpetas para un proyecto web, y enlazar bien los
-distintos ficheros.
-- Tener el código perfectamente indentado.
-- Uso de control de versiones con ramas para manejar un proyecto de código.
-
-JavaScript básico:
-- Crear código JavaScript con sintaxis correcta y bien estructurado.
-- Usar constantes / variables para almacenar información y re-asignar valores.
-- Usar condicionales para ejecutar acciones distintas en función de una condición.
-
-Saber trabajar con listados de datos (arrays).
-Usar funciones para estructurar el código enunciado. 
-Saber modificar la información del DOM para añadir contenido dinámico.
-Saber escuchar eventos del DOM y actuar en consecuencia.
-
-Peticiones AJAX y APIs
-- Crear peticiones con fetch y promesas.
-- Saber trabajar correctamente con la respuesta del servidor.
-- Gestionar información en formato JSON.
-- Usar el localStorage para guardar información en el navegador.
-
-Issues
-- Haber resuelto las issues de la evaluación intermedia.
-
-Ingles
-- Usar selectores de clase en inglés.
-
-Adalab Starter kit.
-- Herramienta facilitada por Adalab creado en **node y gulp**. Una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+## 💻 Technologies
+ ``VS Code``
+ ``HTML``
+ ``SASS``
+ ``Javascript``
 
 
-###  Arrancar el proyecto
+## 🧐 Requirements
 
-Hay 3 tipos de ficheros y carpetas:
+- Use an adequate structure of files and folders for a web project, and link well the
+different files.
+- Have the code perfectly indented.
+- Use of version control with branches to manage a code project.
 
-- Los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos.
-- La carpeta `src/`: son los ficheros de mi página web, como HTML, CSS, JS...
-- Las carpetas `public/` y `docs/` son generadas automáticamente al arrancar el proyecto. El Kit lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
+Basic JavaScript:
+- Create JavaScript code with correct and well-structured syntax.
+- Use constants / variables to store information and re-assign values.
+- Use conditionals to execute different actions based on a condition.
 
-**NOTA:** Necesitas descargar el starter kit y tener instalado [Node JS](https://nodejs.org/) para trabajar con este Kit.
+Know how to work with data lists (arrays).
+Use functions to structure the stated code.
+Saber modify the DOM information to add dynamic content.
+It knows how to listen to DOM events and act accordingly.
 
-### Agradecimientos
+AJAX requests and APIs
+- Create requests with fetch and promises.
+- Know how to work correctly with the server's response.
+- Manage information in JSON format.
+- Use the localStorage to save information in the browser.
 
-A mis profesores/as, compañeras, a mi familia,  y a mi, si todos remamos hacía la misma dirección, se puede. 
+English
+- Use class selectors in English.
 
-"Enseñar no es transferir conocimiento, sino crear las posibilidades para su producción o su construcción. Quien enseña aprende y quien enseña aprende a aprender"                               Paulo Freire.
+## 🛠️ Installation Steps 
+
+This project uses [Adalab Stater Kit](https://github.com/Adalab/adalab-web-starter-kit) (template), [Gulp](https://gulpjs.com/), [Node](https://nodejs.org/es/)  and [npm](https://www.npmjs.com/) . Go check them out if you don't have them locally installed.
+
+How to run a project? 
+
+  1.	The repository
+      `git clone https://github.com/tor3m/series-finder.git`
+  2.	Install dependencies
+    `npm install`
+  3.	Run the app
+     `npm start`
+
+🌟 You are all set!
+
+## 🚀 Demo 
+
+  https://tor3m.github.io/series-finder/
+
+## 👍 Feedback
+Any questions or suggestions? Please feel free to contact me at torres.m3lly@gmail.com 
+
+## 🍰 Contributing
+Please contribute using [GitHub](https://docs.github.com/en/get-started/quickstart/github-flow) Flow. Create a branch, add commits, and open a pull request.
+
+
+## 🦸 Autor 
+Contact me!
+
+<p><a href="https://github.com/tor3m" target="blank"><img align="left" src=https://user-images.githubusercontent.com/81690198/142497840-2dc56a9d-1648-42bc-a091-9a8a66bce02f.jpeg alt="tor3m" height="30" width="40" /></a><a href="https://twitter.com/maribeltm" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="tor3m" height="30" width="40" /></a><a href="https://www.linkedin.com/in/tor3m/ target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/tor3m/" height="30" width="40" /></a></p>
+
+
+## 🤝Acknowledgements 
+
+Many thanks to the Adalab team 💞
+
+## 📝License 
+
+MIT
